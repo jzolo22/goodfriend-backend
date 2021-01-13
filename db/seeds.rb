@@ -13,8 +13,8 @@ Api::V1::Event.destroy_all
 u1 = Api::V1::User.create!(first_name: "Julia", last_name: "Zolotarev")
 u2 = Api::V1::User.create!(first_name: "Dimitrios", last_name: "Fragiskatos")
 
-e1 = Api::V1::Event.create(title: "Anniversary", user_id: Api::V1::User.second.id)
-e2 = Api::V1::Event.create(title: "julia's event", user_id: Api::V1::User.first.id)
+e1 = Api::V1::Event.create!(title: "Store Anniversary", user_id: Api::V1::User.second.id, date: Date.new(2021,3,10))
+e2 = Api::V1::Event.create(title: "Bootcamp Graduation!", user_id: Api::V1::User.first.id, date: Date.new(2021, 1, 29))
 e3 = Api::V1::Event.create(title: "D's event", user_id: Api::V1::User.second.id)
 
 
