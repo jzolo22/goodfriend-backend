@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  password_digest: MyString
+  first_name: MyString
+  last_name: MyString
+  birthday: 2021-01-12
+  address: MyString
+  partner_name: MyString
+  partner_birthday: 2021-01-12
+  venmo_handle: MyString
+  flowers: false
+
+two:
+  username: MyString
+  password_digest: MyString
+  first_name: MyString
+  last_name: MyString
+  birthday: 2021-01-12
+  address: MyString
+  partner_name: MyString
+  partner_birthday: 2021-01-12
+  venmo_handle: MyString
+  flowers: false
