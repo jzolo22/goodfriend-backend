@@ -27,7 +27,7 @@ e6 = Api::V1::Event.create(title: "Geoffrey's event", user_id: u5.id, date: Date
 f1 = Api::V1::Follow.create!(follower_id: Api::V1::User.second.id, followee_id: Api::V1::User.first.id)
 f2 = Api::V1::Follow.create!(follower_id: u2.id, followee_id: u3.id)
 f3 = Api::V1::Follow.create!(follower_id: u2.id, followee_id: u4.id)
-f4 = Api::V1::Follow.create!(follower_id: u2.id, followee_id: u5.id)
+# f4 = Api::V1::Follow.create!(follower_id: u2.id, followee_id: u5.id)
 
 
 # Create array of current user's follower's events:
