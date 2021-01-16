@@ -10,11 +10,11 @@ Api::V1::User.destroy_all
 Api::V1::Follow.destroy_all
 Api::V1::Event.destroy_all
 
-u1 = Api::V1::User.create!(first_name: "Julia", last_name: "Zolotarev", birthday: Date.new(1991, 9, 22), address: "1340 St Marks Ave, Brooklyn NY 11233", partner_name: "Dimitrios", partner_birthday: Date.new(1983, 9, 7), flowers: true)
-u2 = Api::V1::User.create!(first_name: "Dimitrios", last_name: "Fragiskatos", birthday: Date.new(1983, 9, 7), address: "1340 St Marks Ave, Brooklyn NY 11233", partner_name: "Julia", partner_birthday: Date.new(1991, 9, 22), flowers: false)
-u3 = Api::V1::User.create!(first_name: "John", last_name: "Jennison", birthday: Date.new(1983, 9, 7), address: "some place in Brooklyn", partner_name: "John's partner", partner_birthday: Date.new(1991, 9, 22), flowers: true)
-u4 = Api::V1::User.create!(first_name: "Sabrina", last_name: "Hutchins")
-u5 = Api::V1::User.create!(first_name: "Geoffrey", last_name: "Yang")
+u1 = Api::V1::User.create!(username: "juliaz", password: "password123", first_name: "Julia", last_name: "Zolotarev", birthday: Date.new(1991, 9, 22), address: "1340 St Marks Ave, Brooklyn NY 11233", partner_name: "Dimitrios", partner_birthday: Date.new(1983, 9, 7), flowers: true)
+u2 = Api::V1::User.create!(username: "df", password: "password123",first_name: "Dimitrios", last_name: "Fragiskatos", birthday: Date.new(1983, 9, 7), address: "1340 St Marks Ave, Brooklyn NY 11233", partner_name: "Julia", partner_birthday: Date.new(1991, 9, 22), flowers: false)
+u3 = Api::V1::User.create!(username: "jj", password: "password123",first_name: "John", last_name: "Jennison", birthday: Date.new(1983, 9, 7), address: "some place in Brooklyn", partner_name: "John's partner", partner_birthday: Date.new(1991, 9, 22), flowers: true)
+u4 = Api::V1::User.create!(username: "sh", password: "password123",first_name: "Sabrina", last_name: "Hutchins")
+u5 = Api::V1::User.create!(username: "gy", password: "password123",first_name: "Geoffrey", last_name: "Yang")
 
 e1 = Api::V1::Event.create!(title: "Store Anniversary", user_id: Api::V1::User.second.id, date: Date.new(2021,3,10))
 e2 = Api::V1::Event.create(title: "Bootcamp Graduation!", user_id: Api::V1::User.first.id, date: Date.new(2021, 1, 29))
