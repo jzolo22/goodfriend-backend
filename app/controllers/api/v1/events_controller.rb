@@ -10,6 +10,11 @@ class Api::V1::EventsController < ApplicationController
         render json: event
     end
 
+    def destroy 
+        event = Api::V1::Event.find(params[:id])
+        event.destroy
+    end
+
     private
     def event_params
         params.require(:event).permit(:user_id, :title, :date, :type, :annual, :description, :celebrator_id)
