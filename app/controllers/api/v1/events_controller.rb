@@ -10,6 +10,12 @@ class Api::V1::EventsController < ApplicationController
         render json: event
     end
 
+    def update 
+        event = Api::V1::Event.find(params[:id])
+        event.update(event_params)
+        render json: event
+    end
+
     def destroy 
         event = Api::V1::Event.find(params[:id])
         event.destroy
