@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-    skip_before_action :authorized, only: [:create]
+    skip_before_action :authorized, only: [:create, :index]
 
     def profile
         # byebug
@@ -17,7 +17,8 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def create 
-        user = Api::V1::User.create(user_params)
+        # byebug
+        user = Api::V1::User.create!(user_params)
         if user.valid?
             @token = encode_token(user_id: user.id)
             render json: {user: Api::V1::UserSerializer.new(user), jwt: @token }, status: :created 
