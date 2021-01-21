@@ -21,7 +21,8 @@ class Api::V1::UserSerializer < ActiveModel::Serializer
   def profile_picture
     if object.profile_picture.attached?
       {
-        url: rails_blob_url(object.profile_picture)
+        url: rails_blob_url(object.profile_picture),
+        signed_id: object.profile_picture.signed_id
       }
     end
   end

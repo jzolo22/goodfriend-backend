@@ -8,5 +8,9 @@ class Api::V1::User < ApplicationRecord
     has_many :followers, through: :following_users
 
     has_many :events
+    
+    has_one :wishlist
+    has_many :items, through: :wishlists
+
     has_one_attached :profile_picture
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_20_041106) do
+ActiveRecord::Schema.define(version: 2021_01_21_211829) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,13 @@ ActiveRecord::Schema.define(version: 2021_01_20_041106) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "api_v1_items", force: :cascade do |t|
+    t.integer "wishlist_id"
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "api_v1_users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
@@ -66,6 +73,12 @@ ActiveRecord::Schema.define(version: 2021_01_20_041106) do
     t.date "partner_birthday"
     t.string "venmo_handle"
     t.boolean "flowers"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "api_v1_wishlists", force: :cascade do |t|
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
