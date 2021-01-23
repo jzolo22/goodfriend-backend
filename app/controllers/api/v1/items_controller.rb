@@ -1,3 +1,5 @@
+require 'link_thumbnailer'
+
 class Api::V1::ItemsController < ApplicationController
 
     def index
@@ -7,6 +9,8 @@ class Api::V1::ItemsController < ApplicationController
 
     def create
         item = Api::V1::Item.create(item_params)
+        object = LinkThumbnailer.generate("#{item.link}")
+        item[:image_link] = object.images.first.src.to_s
         render json: {item: Api::V1::ItemSerializer.new(item)}
     end
 

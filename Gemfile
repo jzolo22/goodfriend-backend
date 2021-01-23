@@ -45,3 +45,5 @@ gem "jwt", "~> 2.2"
 
 
 gem "figaro", "~> 1.2"
+
+gem 'link_thumbnailer'
