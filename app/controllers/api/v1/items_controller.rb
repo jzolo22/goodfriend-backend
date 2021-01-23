@@ -10,7 +10,8 @@ class Api::V1::ItemsController < ApplicationController
     def create
         item = Api::V1::Item.create(item_params)
         object = LinkThumbnailer.generate("#{item.link}")
-        item[:image_link] = object.images.first.src.to_s
+        item.update(image_link: object.images.first.src.to_s)
+        byebug
         render json: {item: Api::V1::ItemSerializer.new(item)}
     end
 
