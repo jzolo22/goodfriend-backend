@@ -1,5 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.default_url_options = { :host => "goodfriend.netlify.app" }
+  Rails.application.routes.default_url_options[:host] = 'goodfriend.netlify.app'
 
   # Code is not reloaded between requests.
   config.cache_classes = true
