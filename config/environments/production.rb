@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.default_url_options = { :host => "good-friend.herokuapp.com" }
-  Rails.application.routes.default_url_options[:host] = 'good-friend.herokuapp.com'
+  config.default_url_options = { :host => "storage.googleapis.com" }
+  Rails.application.routes.default_url_options[:host] = 'storage.googleapis.com'
 
   # Code is not reloaded between requests.
   config.cache_classes = true
