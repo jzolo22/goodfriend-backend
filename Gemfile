@@ -48,5 +48,5 @@ gem "figaro", "~> 1.2"
 
 gem 'link_thumbnailer'
 
-gem "google-cloud-storage", "~> 1.8", require: false
+gem "google-cloud-storage", "~> 1.11", require: false
 

@@ -269,7 +269,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   figaro (~> 1.2)
-  google-cloud-storage (~> 1.8)
+  google-cloud-storage (~> 1.11)
   jwt (~> 2.2)
   link_thumbnailer
   listen (~> 3.2)

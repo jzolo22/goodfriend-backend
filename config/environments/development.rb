@@ -26,7 +26,7 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :google
+  config.active_storage.service = :google_dev
   config.default_url_options = { :host => "good-friend.herokuapp.com" }
 
   # Don't care if the mailer can't send.
