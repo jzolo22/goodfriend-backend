@@ -47,3 +47,6 @@ gem "jwt", "~> 2.2"
 gem "figaro", "~> 1.2"
 
 gem 'link_thumbnailer'
+
+gem "google-cloud-storage", "~> 1.8", require: false
+
