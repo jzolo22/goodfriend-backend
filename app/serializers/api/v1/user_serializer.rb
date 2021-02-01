@@ -8,6 +8,7 @@ class Api::V1::UserSerializer < ActiveModel::Serializer
 
   def followed_events
     self.object.followed_users.map {|user| ActiveModel::SerializableResource.new(Api::V1::User.find(user.followee_id).events, each_serializer: Api::V1::EventSerializer)}
+    # make sure that each followed event is passed through the event serializer before being shown with user
   end
 
   def your_followers
