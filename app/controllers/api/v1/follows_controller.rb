@@ -1,4 +1,5 @@
 class Api::V1::FollowsController < ApplicationController
+    skip_before_action :authorized, only: [:create, :destroy]
 
     def create
         follow = Api::V1::Follow.create!(follow_params)

@@ -1,6 +1,8 @@
 require 'link_thumbnailer'
 
 class Api::V1::ItemsController < ApplicationController
+    skip_before_action :authorized, only: [:create, :index, :update, :destroy]
+
 
     def index
         items = Api::V1::Item.all 
@@ -9,6 +11,7 @@ class Api::V1::ItemsController < ApplicationController
 
     def create
         item = Api::V1::Item.create(item_params)
+        # amazon links are not optimized with image thumbnails so skip image creation if link is Amazon link
         if !item[:link].include?("amazon") 
             object = LinkThumbnailer.generate("#{item.link}")
             item.update(image_link: object.images.first.src.to_s)
