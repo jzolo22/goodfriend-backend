@@ -1,4 +1,5 @@
 class Api::V1::EventsController < ApplicationController
+    skip_before_action :authorized, only: [:create, :index, :update, :destroy]
 
     def index 
         events = Api::V1::Event.all 
